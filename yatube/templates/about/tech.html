@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Технологии{% endblock %}
+{% block content %}
+{% load static %}
+<div class="container">
+<div class="row">
+  <h1>Вот что я умею</h1>
+  <aside class="col-12 col-md-3">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        Python
+      </li>
+      <li class="list-group-item">
+        Django
+      </li>
+    </ul>
+  </aside>
+  <article class="col-12 col-md-9">
+    <p>Знание основ программирования: циклы, ветвления, ООП</p>
+    <p>Понимание основного инструментария и умение гуглить</p>
+  </article>
+  <div class="col">
+    <img src="{% static 'img/tech.jpg' %}" width="300" height="300" class="d-inline-block align-top " alt="">
+  </div>
+</div>
+</div>
+{% endblock %}
