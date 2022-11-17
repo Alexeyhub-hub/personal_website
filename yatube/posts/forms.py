@@ -22,4 +22,3 @@ class CommentForm(forms.ModelForm):
         help_texts = {'text': 'Добавить комментарий'}
         required = {'text': False}
         fields = ['text']
-
