@@ -18,6 +18,7 @@ def index(request):
     page_obj = get_page_obj(post_list, page_number)
     context = {
         'page_obj': page_obj,
+        'view_name': index.__name__
     }
     return render(request, 'posts/index.html', context)
 
@@ -151,6 +152,7 @@ def follow_index(request):
     page_obj = get_page_obj(post_list, page_number)
     context = {
         'page_obj': page_obj,
+        'view_name': follow_index.__name__
     }
     return render(request, 'posts/follow.html', context)
 

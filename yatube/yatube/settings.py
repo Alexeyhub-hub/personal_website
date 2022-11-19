@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0@mc$q_f(1g5(l#n-tbro8vow5t%!)ru(o%5_h9uxa_(im+3a='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 CACHES = {
     'default': {
