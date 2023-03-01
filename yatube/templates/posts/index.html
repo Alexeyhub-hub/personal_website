@@ -3,9 +3,9 @@
   Последние обновления на сайте
 {% endblock %}
 {% block content %}
-  {% include 'includes/switcher.html' %}
   {% load cache %}
   {% cache 20 index_page %}
+  {% include 'includes/switcher.html' %}
   <div class="container py-5">
     <article>
       <h1>Последние обновления на сайте</h1>
