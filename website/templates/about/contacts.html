@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}Contacts{% endblock %}
+{% block content %}
+{% load static %}
+<div class="container">
+  <style>
+    .social-icons {
+      display: flex;
+      justify-content: left;
+      list-style: none;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding-left: 0;
+    }
+    .social-icons>li {
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+    }
+    .social-icons a {
+      position: relative;
+      background-color: #eee;
+      display: block;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      transition: background-color .3s ease-in-out;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: .25rem;
+    }
+    .social-icons a:hover {
+      background-color: #e0e0e0;
+    }
+    .social-icons a::before {
+      content: "";
+      position: absolute;
+      width: 1.2rem;
+      height: 1.2rem;
+      left: .65rem;
+      top: .65rem;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+    }
+    .social-icons .social-icon-instagram::before {
+      background-image: url("{% static 'img/instagram.jpg' %}");
+    }
+
+    .social-icons .social-icon-telegram::before {
+      background-image: url("{% static 'img/icon-tel.jpg' %}");
+    }
+
+    .social-icons .social-icon-github::before {
+      background-image: url("{% static 'img/github.png' %}");
+    }
+    li {
+      list-style-type: none
+     }
+  </style>
+  <div class="row">
+    <aside class="col-12 col-md-3">
+      <h6 class="font_6" style="font-size:45px;">
+        <span class="color_15" style="font-size:45px;">
+          Contact
+        </span>
+      </h6>
+      <hr size="4" width="40%" color="black" align="left">
+      <ul class="list-group list-group-flush">
+        <li>
+          Email: akimov_alexey98@mail.ru
+        </li>
+        <li>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/aleksejs.akimov/?hl=ru" target="_blank" class="social-icon-instagram"></a>
+            <a href="https://t.me/aalex0921" target="_blank" class="social-icon-telegram"></a>
+            <a href="https://github.com/Alexeyhub-hub" target="_blank" class="social-icon-github"></a>
+          </div>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</div>
+{% endblock %}

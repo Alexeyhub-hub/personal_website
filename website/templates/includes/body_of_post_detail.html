@@ -1,0 +1,19 @@
+{% load thumbnail %}
+<div class="row">
+  <aside class="col-12 col-md-3">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        The number of posts:  <span >{{ posts_number }}</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Author:  <span >Alexey Akimov</span>
+      </li>
+    </ul>
+  </aside>
+  <article class="col-12 col-md-9">
+    {% thumbnail post.image "960x339" crop="center" upscale=True as im %}
+      <img class="card-img my-2" src="{{ im.url }}">
+    {% endthumbnail %}
+    <p>{{ post.text|linebreaks }}</p>
+  </article>
+</div>

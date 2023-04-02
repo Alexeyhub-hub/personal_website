@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html> <!-- Используется html 5 версии -->
+<html lang="en"> <!-- Язык сайта - русский -->
+  <head>    
+    <meta charset="utf-8"> <!-- Кодировка сайта -->
+    <!-- Сайт готов работать с мобильными устройствами -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Загружаем фав-иконки -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/fav/my_logo-180-180.jpg' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/fav/my_logo-32-32.jpg' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/fav/my_logo-16-16.jpg' %}">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Подключен файл со стандартными стилями бустрап -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>
+      {% block title %}
+        Заголовок отсутствует!
+      {% endblock %}
+    </title>
+    <style>
+      footer{
+       bottom: 0;
+       position: fixed;
+       width: 100%;
+      }
+      .footer {
+       text-align:center;
+      }
+      main {
+        height: calc(100vh - 100px); /* adjust the 100px value as needed based on the height of your footer */
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      {% include 'includes/header.html' %}    
+    </header>
+    <main>
+      <div class="main">
+        <!-- класс py-5 создает отступы сверху и снизу блока -->
+        {% block content %}
+        Контент отсутствует!
+        {% endblock %}
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        {% include 'includes/footer.html' %}
+      </div>
+    <footer>
+  </body>
+</html>

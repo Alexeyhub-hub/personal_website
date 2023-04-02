@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Об авторе проекта{% endblock %}
+{% block content %}
+{% load static %}
+<div class="container">
+  <h1>Alexey Akimov</h1>
+  <div class="row">
+    <div class="col">
+      <p>
+        A financier with three years of experience in investment banking. Over the past two years,
+        I have been engaged in the automation of business processes and the development of
+        algorithmic trading in the bank "Derzhava", launched futures trading on the RGBI index
+        as a part of market-making activities.
+      </p>
+      <p>
+        Graduate student of the Faculty of Economics of Lomonosov Moscow State University.
+        As part of my master's thesis, I study the impact of inflation risk on the pricing
+        of various asset classes.
+      </p>
+      <p>
+        I study Python, at least, to develop my career opportunities. As a maximum, I would like
+        to have expertise in Python development and change my profession with a focus on an IT profile.
+      </p>
+      <p>
+        My dream is to create a business that will make people's lives better. I hope that knowledge
+        of finance and IT skills will help me in this.
+      </p>
+    </div>
+    <div class="col">
+      <img src="{% static 'img/me.jpg' %}" width="400" height="400" class="d-inline-block align-top " alt="" class="left">
+    </div>
+  </div>
+</div>
+{% endblock %}

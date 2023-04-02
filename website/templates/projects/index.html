@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+  My projects
+{% endblock %}
+{% block content %}
+  {% load cache %}
+  {% cache 20 index_page %}
+  <div class="container py-5">
+    <article>
+      <h3>My projects</h3>
+      {% for post in page_obj %}
+        {% include 'includes/body_of_post.html' %}
+        <p>
+          <a href="{% url 'projects:post_detail' post.id %}">Read</a>
+        </p>
+        {% if not forloop.last %}<hr>{% endif %}
+      {% endfor %}
+      {% include 'includes/paginator.html' %}
+    </article>
+  </div>
+  {% endcache %}
+{% endblock %}

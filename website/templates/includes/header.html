@@ -1,0 +1,27 @@
+{% load static %}
+<nav class="navbar navbar-dark" style="background-color: MidnightBlue">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'projects:posts_home_page' %}">
+      <span style="color:white">Nothing is impossible</span>
+    </a>
+    {% with request.resolver_match.view_name as view_name %}
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link {% if view_name  == 'about:author' or view_name  == 'projects:posts_home_page' %}active{% endif %}"
+           href="{% url 'about:author' %}">About
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if view_name  == 'projects:creativity' %}active{% endif %}"
+           href="{% url 'projects:creativity' %}">Creativity
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if view_name  == 'about:contacts' %}active{% endif %}"
+           href="{% url 'about:contacts' %}">Contacts
+        </a>
+      </li>
+    </ul>
+    {% endwith %}
+  </div>
+</nav>
